@@ -1,272 +1,867 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy – ProtonCalc - Calculator</title>
-<meta name="description" content="Privacy Policy for ProtonCalc - Calculator, developed by ORYNZO.">
-<style>
-  :root {
-    --bg: #f6f8f7;
-    --card: #ffffff;
-    --text: #1b2321;
-    --muted: #55645f;
-    --accent: #0f9d78;
-    --border: #dbe3e0;
-    --note-bg: #e8f6f1;
-  }
-  @media (prefers-color-scheme: dark) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for ProtonCalc, an Android calculator and unit converter app developed by ORYNZO. Learn about data collection, use, security, retention, and account deletion.">
+  <meta name="robots" content="index, follow">
+  <title>Privacy Policy - ProtonCalc</title>
+  <style>
     :root {
-      --bg: #0c1110;
-      --card: #151c1a;
-      --text: #e6eeeb;
-      --muted: #9fb0aa;
-      --accent: #2fd1a2;
-      --border: #26312e;
-      --note-bg: #12251f;
+      color-scheme: light;
+      --background: #f4f6fa;
+      --surface: #ffffff;
+      --text: #202938;
+      --muted: #5c6678;
+      --primary: #2458c6;
+      --border: #e1e6ef;
+      --soft: #edf3ff;
     }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.7;
-    font-size: 16px;
-  }
-  .wrap { max-width: 820px; margin: 0 auto; padding: 32px 18px 64px; }
-  header { margin-bottom: 24px; }
-  header .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: 1.5px; font-size: 12px; text-transform: uppercase; }
-  h1 { font-size: 32px; margin: 6px 0 8px; line-height: 1.2; }
-  .meta { color: var(--muted); font-size: 14px; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px 22px;
-    margin-bottom: 18px;
-  }
-  h2 { font-size: 21px; margin: 0 0 10px; color: var(--accent); }
-  h3 { font-size: 17px; margin: 18px 0 6px; }
-  p { margin: 8px 0; }
-  ul { margin: 8px 0 8px 22px; padding: 0; }
-  li { margin: 5px 0; }
-  a { color: var(--accent); }
-  .note {
-    background: var(--note-bg);
-    border-left: 4px solid var(--accent);
-    padding: 12px 14px;
-    border-radius: 8px;
-    margin: 12px 0;
-  }
-  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15px; }
-  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
-  th { color: var(--muted); font-weight: 600; }
-  .toc { columns: 2; column-gap: 28px; margin-left: 18px; }
-  @media (max-width: 600px) {
-    h1 { font-size: 26px; }
-    .toc { columns: 1; }
-    table, thead, tbody, th, td, tr { font-size: 14px; }
-  }
-  footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 28px; }
-</style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
+
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 8px 32px rgba(28, 44, 78, 0.05);
+    }
+
+    header {
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 5vw, 40px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .metadata {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .meta-item {
+      padding: 12px 14px;
+      background: #f8faff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    .meta-label {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .meta-value {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav {
+      padding: 22px 24px;
+      margin: 0 0 32px;
+      background: var(--soft);
+      border: 1px solid #dce7ff;
+      border-radius: 10px;
+    }
+
+    nav h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    nav ol {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    nav li {
+      margin: 3px 0;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    main section {
+      margin-bottom: 32px;
+      scroll-margin-top: 20px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 23px;
+      line-height: 1.35;
+      letter-spacing: -0.3px;
+    }
+
+    h3 {
+      margin: 20px 0 8px;
+      font-size: 17px;
+      line-height: 1.45;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul,
+    ol {
+      padding-left: 24px;
+      margin: 8px 0 16px;
+    }
+
+    li {
+      margin-bottom: 7px;
+      padding-left: 2px;
+    }
+
+    .highlight {
+      padding: 16px 18px;
+      margin: 16px 0;
+      background: #f8faff;
+      border-left: 4px solid var(--primary);
+      border-radius: 4px;
+    }
+
+    .deletion {
+      padding: 22px;
+      background: #f8faff;
+      border: 1px solid #dce7ff;
+      border-radius: 10px;
+    }
+
+    .deletion h3:first-child {
+      margin-top: 0;
+    }
+
+    .contact-card {
+      padding: 20px;
+      background: #f8faff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .contact-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .email {
+      font-weight: 700;
+    }
+
+    footer {
+      padding-top: 22px;
+      margin-top: 36px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 12px;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .container {
+        padding: 24px 18px;
+        border-radius: 10px;
+      }
+
+      .metadata {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        padding: 18px;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+
+      .deletion,
+      .contact-card {
+        padding: 16px;
+      }
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: #ffffff;
+      }
+
+      .container {
+        max-width: none;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="wrap">
+  <div class="container">
+    <header>
+      <p class="eyebrow">ORYNZO · Privacy and Data Protection</p>
+      <h1>Privacy Policy</h1>
+      <p class="intro">
+        This Privacy Policy explains how ProtonCalc collects, uses, stores,
+        protects, and deletes information when you use our Android application.
+      </p>
 
-<header>
-  <div class="eyebrow">ORYNZO</div>
-  <h1>Privacy Policy</h1>
-  <div class="meta">App: <strong>ProtonCalc - Calculator</strong> &nbsp;|&nbsp; Effective date: October 27, 2026 &nbsp;|&nbsp; Last updated: October 27, 2026</div>
-</header>
+      <div class="metadata">
+        <div class="meta-item">
+          <span class="meta-label">Effective Date</span>
+          <span class="meta-value">October 28, 2026</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Application</span>
+          <span class="meta-value">ProtonCalc</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Developer</span>
+          <span class="meta-value">ORYNZO</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Android Package</span>
+          <span class="meta-value">com.protoncalc.app</span>
+        </div>
+      </div>
+    </header>
 
-<div class="card">
-  <h2>Summary</h2>
-  <p>ProtonCalc - Calculator ("ProtonCalc", "the App", "we", "us", "our") is a calculator and unit/currency converter app developed by <strong>ORYNZO</strong> ("Developer"). We respect your privacy and collect only the information needed to run the App.</p>
-  <ul>
-    <li>You can use the calculator <strong>without creating an account</strong>.</li>
-    <li>We do <strong>not</strong> show ads, do <strong>not</strong> sell your personal information, and do <strong>not</strong> collect your location, contacts, photos, camera or microphone data.</li>
-    <li>If you create an account, you can <strong>permanently delete it at any time</strong> from inside the App (Settings → Delete Account).</li>
-  </ul>
-</div>
+    <nav aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#information">Information We Collect</a></li>
+        <li><a href="#device-data">Information Stored on Your Device</a></li>
+        <li><a href="#not-collected">Information We Do Not Collect</a></li>
+        <li><a href="#use">How We Use Information</a></li>
+        <li><a href="#third-parties">Third-Party Services</a></li>
+        <li><a href="#security">Data Security</a></li>
+        <li><a href="#retention">Data Retention</a></li>
+        <li><a href="#deletion">Account and Data Deletion</a></li>
+        <li><a href="#rights">Your Privacy Rights</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#transfers">International Data Transfers</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
+    </nav>
 
-<div class="card">
-  <h2>Contents</h2>
-  <ol class="toc">
-    <li><a href="#who">Who we are</a></li>
-    <li><a href="#collect">Information we collect</a></li>
-    <li><a href="#not-collect">Information we do not collect</a></li>
-    <li><a href="#use">How we use information</a></li>
-    <li><a href="#share">Sharing and third-party services</a></li>
-    <li><a href="#payments">Purchases and ProtonCoins</a></li>
-    <li><a href="#retention">Data retention</a></li>
-    <li><a href="#delete">Account and data deletion</a></li>
-    <li><a href="#security">Security</a></li>
-    <li><a href="#rights">Your rights and choices</a></li>
-    <li><a href="#children">Children's privacy</a></li>
-    <li><a href="#transfers">International data transfers</a></li>
-    <li><a href="#changes">Changes to this policy</a></li>
-    <li><a href="#contact">Contact us</a></li>
-  </ol>
-</div>
+    <main>
+      <section id="introduction">
+        <h2>1. Introduction</h2>
+        <p>
+          ProtonCalc is an Android calculator and unit-converter application
+          developed by ORYNZO. It provides Basic and Scientific calculators,
+          multiple unit converters, light and dark themes, an in-app coin
+          balance, and optional Google or email account sign-in.
+        </p>
+        <p>
+          We respect your privacy and aim to collect only the information
+          needed to provide account-related features, synchronize your data,
+          process in-app purchases, maintain security, and respond to support
+          requests.
+        </p>
+        <p>
+          The Basic and Scientific calculators operate entirely on your device
+          and are available without an account. Opening a unit converter is
+          free, while each successful conversion costs 12 coins. Failed
+          conversions are not charged. New accounts start with 30 coins.
+        </p>
+        <p>
+          Signing in through Google or email is optional. An account is needed
+          only for coin-based conversions, coin balance synchronization, coin purchases, and
+          cross-device calculation history. You can use the basic calculator
+          features without signing in.
+        </p>
+        <p>
+          By using ProtonCalc, you acknowledge this Privacy Policy. Where
+          applicable law requires consent for a particular processing activity,
+          we will rely on the appropriate legal basis and obtain consent when
+          required.
+        </p>
+      </section>
 
-<div class="card" id="who">
-  <h2>1. Who we are</h2>
-  <p>The data controller for ProtonCalc is <strong>ORYNZO</strong>, the developer and publisher of the App on Google Play.</p>
-  <p>Developer support contact: <a href="mailto:orynzo@proton.me">orynzo@proton.me</a></p>
-</div>
+      <section id="information">
+        <h2>2. Information We Collect</h2>
+        <p>
+          We collect the following information when you choose to use account
+          features or when it is necessary to operate the service.
+        </p>
 
-<div class="card" id="collect">
-  <h2>2. Information we collect</h2>
+        <h3>2.1 Account Information</h3>
+        <ul>
+          <li>
+            <strong>Email address:</strong> Used for account identification,
+            sign-in, and account-related communication.
+          </li>
+          <li>
+            <strong>Display name:</strong> The name associated with your
+            Google account or provided during email sign-up.
+          </li>
+          <li>
+            <strong>Profile photo URL:</strong> The profile image URL supplied
+            by Google sign-in or associated with your account.
+          </li>
+          <li>
+            <strong>Firebase user ID:</strong> A unique identifier used to
+            associate your account with its balance, history, and transactions.
+          </li>
+        </ul>
 
-  <h3>2.1 Information stored only on your device (no account needed)</h3>
-  <ul>
-    <li><strong>Calculation history</strong> – up to the 50 most recent calculations (expression and result).</li>
-    <li><strong>Preferences</strong> – theme (light/dark), touch feedback (sound &amp; haptics) setting, and an optional display name that you choose.</li>
-  </ul>
-  <p>This information stays on your device. Basic and Scientific calculations are performed on your device and are not sent to our servers.</p>
+        <h3>2.2 Coin Balance and Transactions</h3>
+        <p>
+          We store your coin balance and coin transaction records, including
+          a transaction ID, transaction type, and amount. This information
+          allows us to maintain your balance and record coin credits and
+          deductions associated with supported app features.
+        </p>
 
-  <h3>2.2 Information we collect when you create an account</h3>
-  <p>Creating an account is optional. You can sign up with Google or with an email address and password, which is handled through Firebase Authentication (a Google service). If you create an account, we receive and store:</p>
-  <table>
-    <thead><tr><th>Data</th><th>Purpose</th></tr></thead>
-    <tbody>
-      <tr><td>Email address</td><td>Identify your account and sign you in</td></tr>
-      <tr><td>Display name</td><td>Show your name in the App</td></tr>
-      <tr><td>Profile photo URL (Google sign-in only)</td><td>Show your profile picture in the App</td></tr>
-      <tr><td>Firebase user ID</td><td>Link your account to its sign-in credentials</td></tr>
-      <tr><td>ProtonCoin balance and coin transaction records</td><td>Provide the coin feature and prevent duplicate or fraudulent transactions</td></tr>
-      <tr><td>Calculation history (up to 50 entries)</td><td>Sync your history across your devices</td></tr>
-      <tr><td>Session token (stored in hashed form on our server) and expiry time</td><td>Keep you signed in securely; sessions last up to 30 days</td></tr>
-    </tbody>
-  </table>
-  <p>If you sign up with an email address, your password is handled by Firebase Authentication. We never see or store your password.</p>
+        <h3>2.3 Synchronized Calculation History</h3>
+        <p>
+          If you use an account, ProtonCalc can synchronize up to the 50 most
+          recent calculation history entries with our server. Each entry may
+          contain:
+        </p>
+        <ul>
+          <li>The calculation expression.</li>
+          <li>The calculation result.</li>
+          <li>The calculator mode: Basic or Scientific.</li>
+          <li>The angle mode: DEG or RAD.</li>
+          <li>The calculation timestamp.</li>
+        </ul>
+        <p>
+          Calculation history is used to provide cross-device access to your
+          recent calculations. You can also maintain local history on your
+          device.
+        </p>
 
-  <h3>2.3 Purchase information</h3>
-  <p>When you buy a ProtonCoin pack through Google Play, Google processes the payment. We do <strong>not</strong> receive your card or payment details. We receive and store only the purchase token, product ID and number of coins credited, so we can verify the purchase with Google Play and avoid crediting the same purchase twice.</p>
+        <h3>2.4 Google Play Purchase Records</h3>
+        <p>
+          When you purchase coins, we process and store the purchase token,
+          product ID, and number of coins associated with the purchase.
+          Purchases require a signed-in account.
+        </p>
+        <p>
+          Our server verifies purchases using the Google Play Developer API
+          before crediting coins. Purchase records help us confirm valid
+          purchases, prevent duplicate coin credits, and detect fraudulent
+          or abusive transactions.
+        </p>
+        <p>
+          We do not receive or store your payment card number, card security
+          code, or other payment card details. Google Play handles payment
+          processing.
+        </p>
 
-  <h3>2.4 Technical information</h3>
-  <p>When the App contacts our servers or third-party services, your IP address and basic request information are unavoidably visible to those servers. Our server may keep limited technical logs (for example, error and security logs) for troubleshooting and abuse prevention.</p>
-</div>
+        <h3>2.5 Session Information</h3>
+        <p>
+          We maintain session tokens to support authenticated access to
+          account-related services. Session tokens are stored on our server
+          only as hashed values. Sessions expire after 30 days.
+        </p>
+        <h3>2.6 Technical Logs and Passwords</h3>
+        <p>
+          Our servers and hosting provider may process standard technical
+          logs, such as IP address, request time, and error information, for
+          security and troubleshooting. If you sign up with email, your
+          password is handled by Firebase Authentication; we do not store
+          your password in our own database.
+        </p>
+      </section>
 
-<div class="card" id="not-collect">
-  <h2>3. Information we do not collect</h2>
-  <ul>
-    <li>Precise or approximate location</li>
-    <li>Contacts, calendar, SMS or call logs</li>
-    <li>Photos, videos, camera, microphone or files</li>
-    <li>Advertising ID, and no personalized advertising</li>
-    <li>Payment card or bank details</li>
-  </ul>
-  <p>ProtonCalc does not contain third-party advertising SDKs. Inputs you type into the converters (for example, the BMI converter or the date/age converter) are used only to compute the result on your device and are not sent to our servers or stored in your account.</p>
-</div>
+      <section id="device-data">
+        <h2>3. Information Stored on Your Device</h2>
+        <p>
+          ProtonCalc stores certain preferences and app data locally on your
+          Android device. These include:
+        </p>
+        <ul>
+          <li>Your selected light or dark theme.</li>
+          <li>Your haptics and sound setting.</li>
+          <li>Your chosen profile name.</li>
+          <li>Your local calculation history.</li>
+          <li>Your sign-in session information.</li>
+        </ul>
+        <p>
+          Local settings and history are used to preserve your preferences and
+          provide a convenient experience. Local data is separate from
+          synchronized account data stored on our server.
+        </p>
+        <p>
+          You can clear local data through the app's Settings &gt; Clear data /
+          reset option. This action keeps your account and coin balance intact.
+          Account deletion is a separate action described below.
+        </p>
+      </section>
 
-<div class="card" id="use">
-  <h2>4. How we use information</h2>
-  <ul>
-    <li>To create and secure your account and keep you signed in.</li>
-    <li>To store and sync your ProtonCoin balance and calculation history.</li>
-    <li>To verify Google Play purchases and credit coins.</li>
-    <li>To deduct coins when you complete a paid conversion (a successful conversion costs 12 ProtonCoins; opening a converter and using the calculator are free).</li>
-    <li>To protect the App against fraud, abuse and technical problems.</li>
-    <li>To respond to your support requests and comply with legal obligations.</li>
-  </ul>
-  <p>If you are in the European Economic Area, the United Kingdom or a similar region, our legal bases are: performance of a contract (providing the App and your account), legitimate interests (security, fraud prevention and improving reliability), legal obligations, and consent where applicable.</p>
-</div>
+      <section id="not-collected">
+        <h2>4. Information We Do Not Collect</h2>
+        <p>
+          ProtonCalc does not collect or request access to the following
+          categories of personal information as part of its described
+          functionality:
+        </p>
+        <ul>
+          <li>Precise or approximate location.</li>
+          <li>Camera or microphone data.</li>
+          <li>Contacts.</li>
+          <li>Photos or files stored on your device.</li>
+          <li>Advertising identifiers.</li>
+        </ul>
+        <p>
+          ProtonCalc does not display advertisements and does not use
+          third-party analytics or tracking services. We do not sell or share
+          personal information for advertising purposes.
+        </p>
+        <p>
+          We do not see or store payment card details. Payments are handled
+          entirely by Google Play.
+        </p>
+        <p>
+          The account-related information described in this policy is collected
+          only when you use the relevant features. The Basic and Scientific
+          calculators perform calculations locally on your device.
+        </p>
+      </section>
 
-<div class="card" id="share">
-  <h2>5. Sharing and third-party services</h2>
-  <p>We do not sell or rent your personal information. We share information only with service providers needed to operate the App:</p>
-  <ul>
-    <li><strong>Google Firebase Authentication / Google Sign-In</strong> – account sign-in and identity verification. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
-    <li><strong>Google Play (Billing and Play services)</strong> – payments, purchase verification and app distribution. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
-    <li><strong>Cloud hosting and database providers</strong> – to host our server and the database that stores account data.</li>
-    <li><strong>Public currency-rate data sources</strong> – the currency converter fetches exchange rates from a public currency-data service delivered through content delivery networks (jsDelivr and Cloudflare Pages). These requests contain only the currency code and date requested, no account information; the networks may see your IP address.</li>
-  </ul>
-  <p>We may also disclose information if required by law, to enforce our rights, or to protect the safety and security of users and the App.</p>
-</div>
+      <section id="use">
+        <h2>5. How We Use Information</h2>
+        <p>
+          We use the information described in this policy for the following
+          purposes:
+        </p>
+        <ul>
+          <li>
+            <strong>Account access:</strong> To authenticate users through
+            Google or email and associate data with the correct account.
+          </li>
+          <li>
+            <strong>Synchronization:</strong> To synchronize coin balances
+            and recent calculation history across supported devices.
+          </li>
+          <li>
+            <strong>Purchase processing:</strong> To verify Google Play
+            purchases and credit the appropriate number of coins.
+          </li>
+          <li>
+            <strong>Fraud prevention:</strong> To prevent duplicate purchase
+            credits, unauthorized transactions, and abuse of the service.
+          </li>
+          <li>
+            <strong>Service security:</strong> To authenticate requests,
+            manage sessions, and protect account-related features.
+          </li>
+          <li>
+            <strong>Support:</strong> To respond to questions, account
+            requests, and other support communications.
+          </li>
+        </ul>
+        <p>
+          We do not use the information described in this policy to serve
+          personalized advertisements or to conduct third-party advertising
+          tracking.
+        </p>
+      </section>
 
-<div class="card" id="payments">
-  <h2>6. Purchases and ProtonCoins</h2>
-  <p>ProtonCoins are a virtual in-app balance with no cash value. They can be used only inside ProtonCalc, cannot be transferred or exchanged for money, and are tied to your account. Purchases are made through Google Play and are subject to Google Play's terms and refund policies. If you delete your account, your unused ProtonCoin balance is permanently erased and cannot be restored.</p>
-</div>
+      <section id="third-parties">
+        <h2>6. Third-Party Services</h2>
+        <p>
+          ProtonCalc relies on the following services to provide its
+          account and purchase features.
+        </p>
 
-<div class="card" id="retention">
-  <h2>7. Data retention</h2>
-  <ul>
-    <li><strong>Device-only data</strong> stays on your device until you clear it in the App (Settings → Clear data / reset), clear the App's storage, or uninstall the App.</li>
-    <li><strong>Account data</strong> is kept for as long as your account exists.</li>
-    <li><strong>Sessions</strong> expire automatically after 30 days or when you log out.</li>
-    <li>After you delete your account, we delete your account data as described in Section 8. Limited, de-linked purchase records (purchase token, product ID and coin amount, no longer connected to your account) may be kept to prevent fraud and duplicate crediting and to meet accounting and legal obligations.</li>
-  </ul>
-</div>
+        <h3>6.1 Firebase Authentication and Google Sign-In</h3>
+        <p>
+          We use Firebase Authentication and Google Sign-In, provided by
+          Google LLC, to support optional account authentication. Depending
+          on the sign-in method, account information such as your email
+          address, display name, profile photo URL, and authentication
+          identifiers may be processed to authenticate you.
+        </p>
+        <p>
+          Google's Privacy Policy is available at
+          <a href="https://policies.google.com/privacy"
+             target="_blank" rel="noopener noreferrer">
+            https://policies.google.com/privacy
+          </a>.
+        </p>
 
-<div class="card" id="delete">
-  <h2>8. Account and data deletion</h2>
+        <h3>6.2 Google Play Billing and Google Play Developer API</h3>
+        <p>
+          We use Google Play Billing to process in-app coin purchases and the
+          Google Play Developer API to verify purchases on our server before
+          crediting coins. Google Play handles payment processing under its
+          applicable terms and privacy practices.
+        </p>
 
-  <h3>Delete your account inside the App (while signed in)</h3>
-  <ol>
-    <li>Open ProtonCalc and sign in to your account.</li>
-    <li>Go to <strong>Settings</strong>.</li>
-    <li>Tap <strong>Delete Account</strong> ("Permanently delete your account and all saved data").</li>
-    <li>Confirm by tapping <strong>Delete</strong>.</li>
-  </ol>
-  <div class="note">
-    <strong>What is deleted:</strong> your account record (email, display name, profile photo URL, Firebase user ID), your ProtonCoin balance, your coin transaction records, your synced calculation history, and all of your active sessions. The App also deletes your Firebase Authentication user and clears the preferences and history stored on that device. This action is permanent and cannot be undone.
+        <h3>6.3 Cloud Hosting and Database</h3>
+        <p>
+          Our API server and PostgreSQL database are hosted by a cloud hosting
+          provider. This infrastructure is used to store and process account
+          information, coin balances, transaction records, synchronized
+          calculation history, purchase verification records, and session
+          data as needed to provide the service.
+        </p>
+        <p>
+          Information processed by these service providers is used to operate
+          ProtonCalc and its backend features. We do not sell your personal
+          information to these providers or authorize its use for third-party
+          advertising.
+        </p>
+        <p>
+          We do not operate an advertising network or use third-party
+          analytics or tracking services.
+        </p>
+      </section>
+
+      <section id="security">
+        <h2>7. Data Security</h2>
+        <p>
+          We take reasonable technical and organizational measures designed
+          to protect information processed by ProtonCalc against unauthorized
+          access, alteration, disclosure, and destruction.
+        </p>
+        <p>Our security measures include:</p>
+        <ul>
+          <li>
+            Transmitting data between the app, server, and supported services
+            over HTTPS.
+          </li>
+          <li>
+            Verifying Firebase ID tokens on the server before accepting
+            authenticated requests.
+          </li>
+          <li>
+            Storing server-side session tokens as hashed values rather than
+            as raw tokens.
+          </li>
+          <li>
+            Using secure, HttpOnly cookies for web sessions.
+          </li>
+          <li>
+            Verifying Google Play purchases on the server before crediting
+            purchased coins.
+          </li>
+        </ul>
+        <p>
+          No method of transmission or electronic storage is completely
+          secure. Although we take reasonable steps to protect information,
+          we cannot guarantee absolute security.
+        </p>
+      </section>
+
+      <section id="retention">
+        <h2>8. Data Retention</h2>
+        <p>
+          We retain information for as long as reasonably necessary to provide
+          ProtonCalc's account features, maintain balances and transaction
+          records, verify purchases, protect the service, and meet applicable
+          legal or accounting obligations.
+        </p>
+        <ul>
+          <li>
+            <strong>Account information:</strong> Retained while your account
+            remains active, unless it is deleted earlier or a lawful reason
+            requires otherwise.
+          </li>
+          <li>
+            <strong>Calculation history:</strong> Account-synchronized history
+            is limited to the 50 most recent entries. Local history is stored
+            on your device until you clear it or delete the app's local data.
+          </li>
+          <li>
+            <strong>Coin records:</strong> Coin balances and transaction
+            records are associated with your account until account deletion.
+          </li>
+          <li>
+            <strong>Session information:</strong> Server-side sessions expire
+            after 30 days. Associated session data is deleted when the account
+            is deleted.
+          </li>
+          <li>
+            <strong>Purchase verification records:</strong> Purchase tokens,
+            product IDs, and coin amounts may be retained after account
+            deletion in a form no longer linked to your account, solely to
+            prevent duplicate crediting and fraud and to meet legal or
+            accounting needs.
+          </li>
+        </ul>
+        <p>
+          When information is no longer needed for these purposes, we will
+          delete it or de-link it from your account, subject to applicable
+          legal obligations and the limited purchase-record retention
+          described above.
+        </p>
+      </section>
+
+      <section id="deletion">
+        <h2>9. Account and Data Deletion</h2>
+        <div class="deletion">
+          <p>
+            You can request deletion of your ProtonCalc account and associated
+            personal data at any time using the in-app deletion option or by
+            contacting ORYNZO by email.
+          </p>
+
+          <h3>Option 1: Delete Your Account in the App</h3>
+          <ol>
+            <li>Open ProtonCalc on your Android device.</li>
+            <li>Go to <strong>Settings &gt; Delete Account (available when you are signed in)</strong>.</li>
+            <li>Follow the in-app instructions to confirm account deletion.</li>
+          </ol>
+          <p>
+            Account deletion permanently deletes your sign-in record from Firebase Authentication and the account record from our database, including your email address, display name, profile photo URL, coin balance,
+            synchronized calculation history, sessions, and coin transaction
+            records. Local app data on the device is also cleared where possible.
+          </p>
+
+          <h3>Option 2: Request Deletion by Email</h3>
+          <p>
+            If you cannot access the app or prefer to contact us directly,
+            email
+            <a class="email" href="mailto:orynzo@proton.me">
+              orynzo@proton.me
+            </a>
+            and request deletion of your ProtonCalc account or personal data.
+            We may need sufficient information to identify your account and
+            verify that the request is legitimate.
+          </p>
+
+          <h3>Information That May Be Retained</h3>
+          <p>
+            After account deletion, Google Play purchase verification records
+            containing the purchase token, product ID, and number of coins
+            may be retained in a form no longer linked to your account. Such
+            records are retained only to prevent duplicate coin crediting
+            and fraud and to meet applicable legal or accounting needs.
+          </p>
+
+          <h3>Clear History Without Deleting Your Account</h3>
+          <p>
+            If you want to clear local app data without deleting your account,
+            go to <strong>Settings &gt; Clear data / reset</strong>. This
+            clears local data but keeps your account and coin balance intact.
+            This option is different from deleting your account.
+          </p>
+        </div>
+      </section>
+
+      <section id="rights">
+        <h2>10. Your Privacy Rights</h2>
+        <p>
+          Depending on your location and applicable privacy laws, you may
+          have rights regarding your personal information. These may include:
+        </p>
+        <ul>
+          <li>
+            <strong>Access:</strong> Request information about the personal
+            data we hold about you.
+          </li>
+          <li>
+            <strong>Correction:</strong> Request correction of inaccurate or
+            incomplete personal information.
+          </li>
+          <li>
+            <strong>Deletion:</strong> Request deletion of your account and
+            associated personal information, subject to applicable legal
+            retention requirements.
+          </li>
+          <li>
+            <strong>Withdrawal of consent:</strong> Withdraw consent where
+            processing is based on consent. Withdrawal does not affect the
+            lawfulness of processing carried out before withdrawal.
+          </li>
+          <li>
+            <strong>Other applicable rights:</strong> Depending on the law
+            that applies to you, you may have additional rights, such as
+            requesting a copy of your data or objecting to certain processing.
+          </li>
+        </ul>
+        <p>
+          These rights may be available under privacy laws such as the
+          General Data Protection Regulation (GDPR) or the California
+          Consumer Privacy Act (CCPA), as applicable. The availability and
+          scope of these rights depend on your jurisdiction and the
+          circumstances of the request.
+        </p>
+        <p>
+          You can exercise applicable rights through the relevant settings
+          in ProtonCalc or by emailing
+          <a href="mailto:orynzo@proton.me">orynzo@proton.me</a>.
+          We may request information reasonably necessary to verify your
+          identity before responding. We will handle requests in accordance
+          with applicable law.
+        </p>
+      </section>
+
+      <section id="children">
+        <h2>11. Children's Privacy</h2>
+        <p>
+          ProtonCalc is not directed to children under 13 years of age or,
+          in the European Economic Area (EEA), children under 16 years of age.
+          We do not knowingly collect personal information from children
+          within these age groups.
+        </p>
+        <p>
+          If you are a parent or legal guardian and believe that a child has
+          provided personal information to us, please contact us at
+          <a href="mailto:orynzo@proton.me">orynzo@proton.me</a>.
+          You may request that we review the situation and delete the
+          child's information where appropriate and legally required.
+        </p>
+      </section>
+
+      <section id="transfers">
+        <h2>12. International Data Transfers</h2>
+        <p>
+          ProtonCalc uses third-party services for authentication, purchase
+          verification, and cloud hosting. Depending on the locations of
+          these services and their infrastructure, information may be
+          processed or stored in countries other than your own.
+        </p>
+        <p>
+          Data protection laws in those countries may differ from the laws
+          where you live. Where applicable law requires safeguards for
+          international transfers, appropriate safeguards will be used.
+        </p>
+        <p>
+          For information about how Google processes information through its
+          services, please review
+          <a href="https://policies.google.com/privacy"
+             target="_blank" rel="noopener noreferrer">
+            Google's Privacy Policy
+          </a>.
+        </p>
+      </section>
+
+      <section id="changes">
+        <h2>13. Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time to reflect
+          changes to ProtonCalc, its features, applicable legal requirements,
+          or our data handling practices.
+        </p>
+        <p>
+          When we make changes, we will update the effective date displayed
+          at the top of this page. If a change requires additional notice or
+          consent under applicable law, we will provide that notice or seek
+          consent as required.
+        </p>
+        <p>
+          We encourage you to review this page periodically to stay informed
+          about how your information is handled.
+        </p>
+      </section>
+
+      <section id="contact">
+        <h2>14. Contact Us</h2>
+        <p>
+          If you have questions about this Privacy Policy, our data handling
+          practices, or a request concerning your personal information or
+          account deletion, contact the developer using the details below.
+        </p>
+
+        <div class="contact-card">
+          <p><strong>Developer:</strong> ORYNZO</p>
+          <p><strong>Application:</strong> ProtonCalc</p>
+          <p>
+            <strong>Android Package:</strong>
+            com.protoncalc.app
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <a class="email" href="mailto:orynzo@proton.me">
+              orynzo@proton.me
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 ORYNZO. All rights reserved.
+      </p>
+      <p>
+        ProtonCalc Privacy Policy · Effective October 28, 2026
+      </p>
+    </footer>
   </div>
-
-  <h3>Request deletion by email (if you cannot sign in or no longer have the App)</h3>
-  <p>Send an email to <a href="mailto:orynzo@proton.me?subject=ProtonCalc%20account%20deletion%20request">orynzo@proton.me</a> with the subject "ProtonCalc account deletion request" from the email address registered to your account. We may ask you to confirm that you own the account. We will delete your account data within 30 days of verifying your request.</p>
-
-  <h3>Delete data without deleting your account</h3>
-  <p>You can clear your calculation history and reset your saved settings at any time using <strong>Settings → Clear data / reset</strong>. Your account and ProtonCoin balance remain intact when you do this.</p>
-</div>
-
-<div class="card" id="security">
-  <h2>9. Security</h2>
-  <p>We use reasonable technical and organizational measures to protect your information, including encrypted connections (HTTPS), verification of sign-in tokens on our server, storing session tokens in hashed form on the server, and keeping your session credential in secure device storage on Android. No method of transmission or storage is completely secure, so we cannot guarantee absolute security.</p>
-</div>
-
-<div class="card" id="rights">
-  <h2>10. Your rights and choices</h2>
-  <p>Depending on where you live (for example, under the GDPR in the EEA/UK, or under laws in California and other regions), you may have the right to:</p>
-  <ul>
-    <li>access the personal information we hold about you;</li>
-    <li>correct inaccurate information;</li>
-    <li>delete your information (see Section 8);</li>
-    <li>receive a copy of your information in a portable format;</li>
-    <li>object to or restrict certain processing, and withdraw consent where processing is based on consent;</li>
-    <li>lodge a complaint with your local data protection authority.</li>
-  </ul>
-  <p>To exercise these rights, contact us at <a href="mailto:orynzo@proton.me">orynzo@proton.me</a>. We do not sell or share personal information for cross-context behavioral advertising, and we do not use automated decision-making that produces legal effects about you.</p>
-</div>
-
-<div class="card" id="children">
-  <h2>11. Children's privacy</h2>
-  <p>ProtonCalc is a general-audience utility app and is not directed to children under 13 (or under 16 where local law sets a higher age). We do not knowingly collect personal information from children below that age. Using the calculator and converters does not require an account. If you believe a child has created an account, please contact us at <a href="mailto:orynzo@proton.me">orynzo@proton.me</a> and we will delete the account and its data.</p>
-</div>
-
-<div class="card" id="transfers">
-  <h2>12. International data transfers</h2>
-  <p>ORYNZO and our service providers may process and store information in countries other than your own, including countries that may have different data protection laws. Where required, we rely on appropriate safeguards for such transfers.</p>
-</div>
-
-<div class="card" id="changes">
-  <h2>13. Changes to this policy</h2>
-  <p>We may update this Privacy Policy from time to time. When we do, we will change the "Last updated" date at the top of this page. If the changes are significant, we will give additional notice, for example inside the App. Please review this page periodically.</p>
-</div>
-
-<div class="card" id="contact">
-  <h2>14. Contact us</h2>
-  <p>If you have questions about this Privacy Policy, your data, or want to request account deletion:</p>
-  <p><strong>Developer:</strong> ORYNZO<br>
-  <strong>App:</strong> ProtonCalc - Calculator<br>
-  <strong>Email:</strong> <a href="mailto:orynzo@proton.me">orynzo@proton.me</a></p>
-</div>
-
-<footer>&copy; 2026 ORYNZO. All rights reserved.</footer>
-
-</div>
 </body>
 </html>
